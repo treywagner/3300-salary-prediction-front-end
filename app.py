@@ -10,7 +10,7 @@ app.config["SECRET_KEY"] = "seasdad(*2sffcra01^23sdet"
 CORS(app)
 
 # Get this URL from the Azure Overview page of your API web app
-api_url = "treywagner-api-h3b4cbg5g6f6ehbm.eastus-01.azurewebsites.net"  # base url for API endpoints
+api_url = "https://treywagner-front-end-a5fyf7dyf9cncchn.eastus-01.azurewebsites.net/"  # base url for API endpoints
 
 
 # main index page route
