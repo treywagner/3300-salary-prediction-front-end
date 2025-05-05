@@ -28,6 +28,7 @@ def predict():
     if request.method == "POST":
         print("in post method")
         #### capture data from the form
+        print(request.form)
         form = request.form  # declare a form variable to capture the form data
         print("extracted form data")
         print(form)
