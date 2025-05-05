@@ -10,7 +10,7 @@ app.config["SECRET_KEY"] = "seasdad(*2sffcra01^23sdet"
 CORS(app)
 
 # Get this URL from the Azure Overview page of your API web app
-api_url = "https://treywagner-front-end-a5fyf7dyf9cncchn.eastus-01.azurewebsites.net/"  # base url for API endpoints
+api_url = "https://treywagner-front-end-a5fyf7dyf9cncchn.eastus-01.azurewebsites.net"  # base url for API endpoints
 
 
 # main index page route
@@ -73,7 +73,9 @@ def predict():
                 # Decode the JSON response
                 prediction = response.json()
 
-                print(prediction)  # Print the decoded JSON for debugging
+                formatted_prediction = f"predicted salary: ${prediction[0]:,.2f}"
+
+                print(formatted_prediction)  # Print the decoded JSON for debugging
 
                 # Pass the decoded JSON response to the HTML page
                 return render_template("index.html", prediction=prediction)
